@@ -1,0 +1,458 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #1a1a1a;
+    --secondary-color: #333;
+    --accent-color: #007bff;
+    --text-color: #333;
+    --light-bg: #f8f9fa;
+    --white: #ffffff;
+    --border-color: #e0e0e0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Profile Hero Section */
+.profile-hero {
+    padding: 4rem 0 3rem;
+    text-align: center;
+    background-image: url('New Header Image 1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.profile-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+.profile-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: contain;
+    object-position: center;
+    margin: 0 auto 2rem;
+    display: block;
+    border: 4px solid var(--white);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background-color: var(--white);
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimizeQuality;
+    -ms-interpolation-mode: bicubic;
+    image-rendering: auto;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+.profile-hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    margin-bottom: 1.5rem;
+    color: #f5f5f5;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+.intro-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #f5f5f5;
+    max-width: 1000px;
+    margin: 0 auto 2rem;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.call-button {
+    display: inline-block;
+    background: #3D40D1;
+    color: #f5f5f5;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(61,64,209,0.3);
+}
+
+.call-button:hover {
+    background: #2d30b8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(61,64,209,0.4);
+}
+
+/* Main Sections */
+.section {
+    padding: 3rem 0;
+}
+
+.section:nth-child(even) {
+    background: var(--light-bg);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.section-subtitle {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    font-style: italic;
+}
+
+/* Learnings Section - Alaya Style */
+#learnings {
+    background: #171C8F !important;
+    padding: 4rem 0;
+    color: #FFFFFF;
+}
+
+#learnings .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+#learnings .section-header {
+    margin-bottom: 0;
+    text-align: left;
+    position: sticky;
+    top: 2rem;
+}
+
+#learnings .section-header h2 {
+    font-size: 2.5rem;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1.3;
+}
+
+#learnings .section-subtitle {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    color: #FFFFFF;
+}
+
+#learnings .brain-icon {
+    width: 300px;
+    height: auto;
+    margin-top: 2rem;
+    display: block;
+}
+
+#learnings .accordion-container {
+    max-width: none;
+    margin: 0;
+}
+
+/* Accordions inside Learnings: backgrounds, borders, text */
+#learnings .accordion-item {
+    background: #171C8F;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+}
+
+#learnings .accordion-header {
+    background: #171C8F;
+}
+
+#learnings .accordion-header:hover {
+    background: #171C8F;
+}
+
+#learnings .accordion-header h3 {
+    color: #FFFFFF;
+}
+
+#learnings .accordion-icon {
+    color: #FFFFFF;
+}
+
+#learnings .accordion-content {
+    background: #171C8F;
+}
+
+#learnings .accordion-content ul li {
+    color: #FFFFFF;
+}
+
+#learnings .accordion-content ul li:before {
+    color: #FFFFFF;
+}
+
+/* Accordion Styles */
+.accordion-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.accordion-section-header {
+    padding: 1.5rem 0 0.5rem;
+    margin-top: 2rem;
+    border-top: 2px solid var(--border-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.accordion-section-header:first-of-type {
+    margin-top: 0;
+    border-top: none;
+    padding-top: 0;
+}
+
+.accordion-item {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.accordion-item:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.accordion-header {
+    padding: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--white);
+    transition: background 0.3s ease;
+    user-select: none;
+}
+
+.accordion-header:hover {
+    background: var(--light-bg);
+}
+
+.accordion-header h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin: 0;
+}
+
+.accordion-icon {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    transition: transform 0.3s ease;
+    font-weight: bold;
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(45deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: var(--light-bg);
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 2000px;
+}
+
+.accordion-content-inner {
+    padding: 1.5rem;
+}
+
+.accordion-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.accordion-content ul li {
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--secondary-color);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.accordion-content ul li:last-child {
+    border-bottom: none;
+}
+
+.accordion-content ul li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.accordion-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+}
+
+.accordion-content table thead {
+    background-color: rgba(0,0,0,0.05);
+}
+
+.accordion-content table th {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.accordion-content table td {
+    padding: 0.75rem 1rem;
+    color: var(--secondary-color);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.accordion-content table tr:last-child td {
+    border-bottom: none;
+}
+
+.accordion-content table tbody tr:hover {
+    background-color: rgba(0,0,0,0.02);
+}
+
+/* Tips Section */
+.tips-section {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 4rem 0;
+}
+
+.tips-section h2 {
+    color: var(--white);
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.tip-card {
+    background: rgba(255,255,255,0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.tip-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.tip-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.tip-card ul li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 0.95rem;
+}
+
+.tip-card ul li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .profile-hero h1 {
+        font-size: 36px;
+    }
+
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .accordion-header h3 {
+        font-size: 1.1rem;
+    }
+
+    #learnings .container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    #learnings .section-header {
+        position: static;
+        text-align: center;
+    }
+}
+
