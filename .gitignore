@@ -1,0 +1,39 @@
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.cache
+
+# Personal documents and folders (Windows)
+My Music/
+My Pictures/
+My Videos/
+
+# Optional: Uncomment if you want to ignore image files during development
+# *.jpg
+# *.png
+# *.gif
+# *.svg
+
+# Note: Keep your required images (New Header Image 1.jpg, profile picture.png, new brain.png) in the repository
+
