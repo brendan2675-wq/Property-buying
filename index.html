@@ -6,7 +6,7 @@
     <title>Property Buying Process Knowledge - Alaya Framework</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -15,26 +15,54 @@
         }
 
         :root {
-            --primary-color: #1a1a1a;
-            --secondary-color: #333;
-            --accent-color: #007bff;
-            --text-color: #333;
-            --light-bg: #f8f9fa;
+            --primary-color: #1A1A2E;
+            --secondary-color: #2D2D44;
+            --accent-color: #FDC82F;
+            --accent-hover: #E5B428;
+            --text-color: #1A1A2E;
+            --text-secondary: #4A4A5C;
+            --light-bg: #F7F8FA;
             --white: #ffffff;
-            --border-color: #e0e0e0;
+            --border-color: #E5E7EB;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
             color: var(--text-color);
             background-color: var(--white);
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+        }
+
+        /* Header with Logo */
+        .site-header {
+            background: var(--white);
+            padding: 1.5rem 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .site-header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+        }
+
+        .site-header .logo-img {
+            height: 42px;
+            width: auto;
+            display: block;
         }
 
         /* Profile Hero Section */
@@ -55,7 +83,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.75) 0%, rgba(26, 26, 46, 0.6) 100%);
             z-index: 0;
         }
         
@@ -73,7 +101,7 @@
             margin: 0 auto 2rem;
             display: block;
             border: 4px solid var(--white);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: var(--shadow-lg);
             background-color: var(--white);
             image-rendering: -webkit-optimize-contrast;
             image-rendering: optimizeQuality;
@@ -86,45 +114,50 @@
         }
 
         .profile-hero h1 {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Inter', sans-serif;
             font-size: 50px;
             margin-bottom: 1.5rem;
-            color: #f5f5f5;
+            color: #ffffff;
             line-height: 1.2;
-            font-weight: 500;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
 
         .intro-text {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+            font-size: 17px;
             font-weight: 400;
-            line-height: 1.5;
-            color: #f5f5f5;
+            line-height: 1.7;
+            color: #ffffff;
             max-width: 1000px;
             margin: 0 auto 2rem;
             text-align: center;
             padding: 0 1rem;
+            opacity: 0.95;
         }
 
         .call-button {
-            display: inline-block;
-            background: #3D40D1;
-            color: #f5f5f5;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #0BAF88;
+            color: var(--white);
+            padding: 0.85rem 2.25rem;
+            border-radius: 8px;
             text-decoration: none;
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Inter', sans-serif;
             font-size: 16px;
-            font-weight: 400;
-            margin-top: 1rem;
+            font-weight: 600;
+            margin: 0;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(61,64,209,0.3);
+            box-shadow: var(--shadow-md);
+            letter-spacing: 0.2px;
         }
 
         .call-button:hover {
-            background: #2d30b8;
+            background: #089872;
             transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(61,64,209,0.4);
+            box-shadow: var(--shadow-lg);
         }
 
         /* Main Sections */
@@ -136,27 +169,38 @@
             background: var(--light-bg);
         }
 
+        #micro {
+            background: #DBF3ED;
+        }
+
+        .section:nth-child(even) .accordion-item {
+            background: var(--white);
+        }
+
         .section-header {
             text-align: center;
             margin-bottom: 2.5rem;
         }
 
         .section-header h2 {
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             margin-bottom: 0.5rem;
             color: var(--primary-color);
             font-weight: 700;
+            letter-spacing: -0.5px;
+            font-family: 'Inter', sans-serif;
         }
 
         .section-subtitle {
-            font-size: 1rem;
-            color: var(--secondary-color);
-            font-style: italic;
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            font-style: normal;
+            font-weight: 400;
         }
 
-        /* Learnings Section - Alaya Style */
+        /* Learnings Section - InvestorKit Style */
         #learnings {
-            background: #171C8F !important;
+            background: #0C494A !important;
             padding: 4rem 0;
             color: #FFFFFF;
         }
@@ -203,17 +247,23 @@
 
         /* Accordions inside Learnings: backgrounds, borders, text */
         #learnings .accordion-item {
-            background: #171C8F;
-            border: 1px solid #FFFFFF;
-            border-radius: 8px;
+            background: #0C494A;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        #learnings .accordion-item:hover {
+            border-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
         #learnings .accordion-header {
-            background: #171C8F;
+            background: #0C494A;
         }
 
         #learnings .accordion-header:hover {
-            background: #171C8F;
+            background: rgba(255, 255, 255, 0.05);
         }
 
         #learnings .accordion-header h3 {
@@ -222,10 +272,15 @@
 
         #learnings .accordion-icon {
             color: #FFFFFF;
+            font-weight: 300;
+        }
+
+        #learnings .accordion-item.active .accordion-icon {
+            color: #FFFFFF;
         }
 
         #learnings .accordion-content {
-            background: #171C8F;
+            background: #0C494A;
         }
 
         #learnings .accordion-content ul li {
@@ -233,7 +288,7 @@
         }
 
         #learnings .accordion-content ul li:before {
-            color: #FFFFFF;
+            color: #0BAF88;
         }
 
         /* Accordion Styles */
@@ -262,14 +317,16 @@
         .accordion-item {
             background: var(--white);
             border: 1px solid var(--border-color);
-            border-radius: 8px;
+            border-radius: 12px;
             margin-bottom: 1rem;
             overflow: hidden;
             transition: all 0.3s ease;
+            box-shadow: var(--shadow-sm);
         }
 
         .accordion-item:hover {
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(26, 26, 46, 0.2);
         }
 
         .accordion-header {
@@ -279,7 +336,7 @@
             justify-content: space-between;
             align-items: center;
             background: var(--white);
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
             user-select: none;
         }
 
@@ -288,28 +345,32 @@
         }
 
         .accordion-header h3 {
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             color: var(--primary-color);
             font-weight: 600;
             margin: 0;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -0.2px;
         }
 
         .accordion-icon {
             font-size: 1.5rem;
-            color: var(--accent-color);
+            color: #0BAF88;
             transition: transform 0.3s ease;
-            font-weight: bold;
+            font-weight: 300;
+            line-height: 1;
         }
 
         .accordion-item.active .accordion-icon {
             transform: rotate(45deg);
+            color: #0BAF88;
         }
 
         .accordion-content {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease;
-            background: var(--light-bg);
+            transition: max-height 0.4s ease;
+            background: var(--white);
         }
 
         .accordion-item.active .accordion-content {
@@ -327,10 +388,12 @@
 
         .accordion-content ul li {
             padding: 0.75rem 0;
-            padding-left: 1.5rem;
+            padding-left: 1.75rem;
             position: relative;
-            color: var(--secondary-color);
+            color: var(--text-secondary);
             border-bottom: 1px solid rgba(0,0,0,0.05);
+            font-size: 15px;
+            line-height: 1.6;
         }
 
         .accordion-content ul li:last-child {
@@ -341,8 +404,9 @@
             content: "→";
             position: absolute;
             left: 0;
-            color: var(--accent-color);
-            font-weight: bold;
+            color: #0BAF88;
+            font-weight: 400;
+            font-size: 18px;
         }
 
         .accordion-content table {
@@ -352,21 +416,26 @@
         }
 
         .accordion-content table thead {
-            background-color: rgba(0,0,0,0.05);
+            background-color: var(--light-bg);
         }
 
         .accordion-content table th {
-            padding: 0.75rem 1rem;
+            padding: 0.875rem 1rem;
             text-align: left;
             font-weight: 600;
             color: var(--primary-color);
             border-bottom: 2px solid var(--border-color);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-family: 'Inter', sans-serif;
         }
 
         .accordion-content table td {
-            padding: 0.75rem 1rem;
-            color: var(--secondary-color);
+            padding: 0.875rem 1rem;
+            color: var(--text-secondary);
             border-bottom: 1px solid rgba(0,0,0,0.05);
+            font-size: 15px;
         }
 
         .accordion-content table tr:last-child td {
@@ -374,7 +443,7 @@
         }
 
         .accordion-content table tbody tr:hover {
-            background-color: rgba(0,0,0,0.02);
+            background-color: var(--light-bg);
         }
 
         /* Tips Section */
@@ -436,13 +505,22 @@
         footer {
             background: var(--primary-color);
             color: var(--white);
-            padding: 2rem 0;
+            padding: 2.5rem 0;
             text-align: center;
             font-size: 0.9rem;
+            font-weight: 400;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
+            .site-header {
+                padding: 1rem 0;
+            }
+
+            .site-header .logo-img {
+                height: 32px;
+            }
+
             .profile-hero h1 {
                 font-size: 36px;
             }
@@ -468,13 +546,20 @@
     </style>
 </head>
 <body>
+    <!-- Site Header with Logo -->
+    <header class="site-header">
+        <div class="container">
+            <img src="Top logo.png" alt="Brendan Smith logo" class="logo-img">
+            <a href="mailto:brendan2675@gmail.com" class="call-button">Get in touch</a>
+        </div>
+    </header>
+
     <!-- Profile Hero Section -->
     <section class="profile-hero">
         <div class="container">
             <img src="profile picture.png" alt="Profile" class="profile-image" id="profileImage">
-            <h1>Not another cookie-cutter buyers agent.</h1>
-            <p class="intro-text">I've built a 4-property portfolio on a regular PAYG income. I use the same data-driven framework as Alaya, combined with insights from experts like yourself and Redom, to identify opportunities. If I get to work for you, I'd love to use your framework as it aligns with mine. Below are the methods and data analysis I've used so far that helped me build my portfolio.</p>
-            <a href="mailto:brendan2675@gmail.com" class="call-button">Get in touch</a>
+            <h1>My approach to acquiring properties.</h1>
+            <p class="intro-text">I've built a 4-property portfolio on a regular PAYG income. I use the same data-driven framework as Investorkit, combined with insights from experts like Junge and Arjun, to identify opportunities. If I get to work for you, I'd love to use your framework as it aligns with mine. Below are the methods and data analysis I've used so far that helped me build my portfolio.</p>
         </div>
     </section>
 
@@ -482,8 +567,8 @@
     <section class="section" id="macro">
         <div class="container">
             <div class="section-header">
-                <h2>THE MACRO</h2>
-                <p class="section-subtitle">Sources I have used to understand macroeconomics</p>
+                <h2>UNDERLYING DEMAND</h2>
+                <p class="section-subtitle">Sources I have used to understand underlying demand</p>
             </div>
 
             <div class="accordion-container">
@@ -638,8 +723,8 @@
     <section class="section" id="micro">
         <div class="container">
             <div class="section-header">
-                <h2>THE MICRO</h2>
-                <p class="section-subtitle">Micro is where the money is made</p>
+                <h2>MARKET PRESSURE ANALYSIS</h2>
+                <p class="section-subtitle">What I've used to determine an LGA or suburb</p>
             </div>
 
             <div class="accordion-container">
@@ -724,8 +809,8 @@
     <section class="section" id="asset">
         <div class="container">
             <div class="section-header">
-                <h2>THE ASSET</h2>
-                <p class="section-subtitle">Find the right asset</p>
+                <h2>THE ACQUISITION</h2>
+                <p class="section-subtitle">How I narrow down my acquisitions</p>
             </div>
 
             <div class="accordion-container">
@@ -822,7 +907,7 @@
     <section class="section" id="learnings">
         <div class="container">
             <div class="section-header">
-                <h2>Things I've learnt I could apply to <span style="color: #a9d6b9;">Alaya Property</span></h2>
+                <h2>Things I've learnt recently I could potentially apply in Property Acquisitions</h2>
                 <img src="new brain.png" alt="Brain icon" class="brain-icon">
             </div>
 
@@ -895,7 +980,7 @@
 
     <footer>
         <div class="container">
-            <p>Property Buying Knowledge Framework | Prepared for Adi</p>
+            <p>My Data Driven Approach | Prepared for Stephen - Head of Acquisitions</p>
         </div>
     </footer>
 
